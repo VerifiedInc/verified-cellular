@@ -1,0 +1,26 @@
+version: 2.1
+
+# verified-cellular hosts two standalone source files (Swift and Kotlin) that consuming
+# apps copy in, so there is no toolchain at the repo root and nothing to lint or test yet.
+# This job is an intentional no-op that keeps a CI quality gate running on every change,
+# as required for SOC 2. Replace the commands below once per-platform checks exist.
+
+jobs:
+  lint-and-test:
+    docker:
+      - image: cimg/base:current
+    steps:
+      - checkout
+
+      - run:
+          name: Run lint (no-op)
+          command: echo "No repo-level lint configured for verified-cellular - skipping."
+
+      - run:
+          name: Run tests (no-op)
+          command: echo "No repo-level tests configured for verified-cellular - skipping."
+
+workflows:
+  lint-and-test:
+    jobs:
+      - lint-and-test

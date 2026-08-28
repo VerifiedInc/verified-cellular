@@ -1,0 +1,20 @@
+plugins {
+  id 'com.android.library'
+  id 'expo-module-gradle-plugin'
+}
+
+group = 'expo.modules.verifiedcellular'
+version = '2.0.0'
+
+android {
+  namespace "expo.modules.verifiedcellular"
+  defaultConfig {
+    // 26 is where ConnectivityManager.requestNetwork's timeout overload lands,
+    // which the snippet needs. The app sets the same floor through
+    // expo-build-properties; this is here so the module states its own
+    // requirement rather than inheriting one silently.
+    minSdkVersion 26
+    versionCode 1
+    versionName "2.0.0"
+  }
+}

@@ -1,7 +1,8 @@
 version: 2.1
 
-# verified-cellular hosts two standalone source files (Swift and Kotlin) that consuming
-# apps copy in, so there is no toolchain at the repo root and nothing to lint or test yet.
+# verified-cellular hosts standalone source files (Swift, Kotlin, and the React Native and
+# Flutter wrappers around them) that consuming apps copy in, so there is no toolchain at
+# the repo root and nothing to lint or test yet.
 # This job is an intentional no-op that keeps a CI quality gate running on every change,
 # as required for SOC 2. Replace the commands below once per-platform checks exist.
 

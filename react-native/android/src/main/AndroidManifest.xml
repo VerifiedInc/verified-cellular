@@ -1,0 +1,8 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- ACCESS_NETWORK_STATE to read what networks exist, CHANGE_NETWORK_STATE
+         to ask for the cellular one. Declared by the module rather than the app,
+         because they are what the module needs to work at all. -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+</manifest>
